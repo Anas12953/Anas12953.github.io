@@ -1,0 +1,2 @@
+export function init(context){let loaded=false;const scene=document.querySelector('[data-portrait]');if(!scene)return;const observer=new IntersectionObserver(entries=>{if(loaded||!entries.some(e=>e.isIntersecting))return;loaded=true;observer.disconnect();import('../portrait.js').then(m=>{const dispose=m.initPortraits(context);window.addEventListener('pagehide',e=>{if(!e.persisted)dispose();});}).catch(()=>{});},{rootMargin:'250px'});observer.observe(scene);}
+
