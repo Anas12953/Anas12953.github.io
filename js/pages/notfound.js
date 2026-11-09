@@ -1,0 +1,8 @@
+import {puzzleMove,walls} from '../game-state.js';
+export function init(context){
+ const board=document.querySelector('[data-puzzle]'),status=document.querySelector('[data-puzzle-status]');let position={x:0,y:5},moves=0,won=false;
+ const cells=[];for(let y=0;y<6;y++)for(let x=0;x<6;x++){const cell=document.createElement('span');cell.className=walls.has(`${x},${y}`)?'puzzle-wall':'puzzle-cell';cell.setAttribute('aria-hidden','true');board.append(cell);cells.push(cell);}
+ function render(){cells.forEach((cell,i)=>{const x=i%6,y=Math.floor(i/6);cell.textContent=x===position.x&&y===position.y?'▣':x===5&&y===0?'◎':'';cell.classList.toggle('puzzle-rover',x===position.x&&y===position.y);cell.classList.toggle('puzzle-goal',x===5&&y===0);});}
+ function move(dx,dy){if(won)return;const next=puzzleMove(position,dx,dy);if(next===position){status.textContent='Path blocked. Try another direction.';return;}position=next;moves++;won=position.x===5&&position.y===0;status.textContent=won?`Delivery complete in ${moves} moves. You found your way!`:`${moves} moves. Robot at row ${position.y+1}, column ${position.x+1}. Destination: top right.`;if(won)context.play('card');render();}
+ const directions={ArrowUp:[0,-1],ArrowDown:[0,1],ArrowLeft:[-1,0],ArrowRight:[1,0]};board.addEventListener('keydown',e=>{if(directions[e.key]){e.preventDefault();move(...directions[e.key]);}});document.querySelectorAll('[data-puzzle-move]').forEach(b=>b.addEventListener('click',()=>move(...directions[b.dataset.puzzleMove])));document.querySelector('[data-reset-puzzle]').addEventListener('click',()=>{position={x:0,y:5};moves=0;won=false;status.textContent='New mission. Reach the circle in the top right.';render();});render();
+}

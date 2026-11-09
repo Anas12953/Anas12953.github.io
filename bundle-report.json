@@ -1,94 +1,147 @@
 {
-  "strategy": "Native ESM route splitting with reachability-based removal of unused modules. No third-party runtime libraries. No source maps. No claim of a third-party bundler/minifier pass.",
-  "shared": {
-    "raw": 17900,
-    "gzip": 6636
+  "strategy": "Static multipage HTML, route-split native ESM. No third-party runtime. 3D scene lazy-loaded near viewport; sound loads only on opt-in. No production source maps. gzip values are deterministic local compression estimates, not measured wire transfer.",
+  "initial": {
+    "raw": 10755,
+    "gzip": 3923
   },
-  "byPage": {
+  "byPageIncludingLazyFeatures": {
     "home": {
-      "raw": 18364,
-      "gzip": 6947
+      "raw": 26985,
+      "gzip": 10449
     },
     "about": {
-      "raw": 18364,
-      "gzip": 6947
+      "raw": 25759,
+      "gzip": 9848
     },
     "projects": {
-      "raw": 18833,
-      "gzip": 7113
+      "raw": 24184,
+      "gzip": 9171
     },
     "project": {
-      "raw": 17900,
-      "gzip": 6636
+      "raw": 23251,
+      "gzip": 8691
     },
-    "contact": {
-      "raw": 19387,
-      "gzip": 7459
+    "journey": {
+      "raw": 23251,
+      "gzip": 8691
+    },
+    "resources": {
+      "raw": 23251,
+      "gzip": 8691
+    },
+    "arabic": {
+      "raw": 23251,
+      "gzip": 8691
+    },
+    "play": {
+      "raw": 27162,
+      "gzip": 10335
     },
     "notfound": {
-      "raw": 17900,
-      "gzip": 6636
+      "raw": 25580,
+      "gzip": 9878
+    },
+    "contact": {
+      "raw": 24738,
+      "gzip": 9511
+    }
+  },
+  "optional": {
+    "js/cursor.js": {
+      "file": "js/cursor.js",
+      "raw": 2331,
+      "gzip": 946
+    },
+    "js/sound.js": {
+      "file": "js/sound.js",
+      "raw": 1398,
+      "gzip": 683
     }
   },
   "modules": [
     {
       "file": "js/app.js",
-      "bytes": 6910,
-      "gzip": 2386
-    },
-    {
-      "file": "js/motion.js",
-      "bytes": 3704,
-      "gzip": 1512
+      "raw": 7051,
+      "gzip": 2412
     },
     {
       "file": "js/cursor.js",
-      "bytes": 2331,
-      "gzip": 945
+      "raw": 2331,
+      "gzip": 946
     },
     {
-      "file": "js/sound.js",
-      "bytes": 1398,
-      "gzip": 691
+      "file": "js/game-state.js",
+      "raw": 613,
+      "gzip": 343
     },
     {
-      "file": "js/pages/home.js",
-      "bytes": 464,
-      "gzip": 311
-    },
-    {
-      "file": "js/portrait.js",
-      "bytes": 2044,
-      "gzip": 848
+      "file": "js/motion.js",
+      "raw": 3704,
+      "gzip": 1511
     },
     {
       "file": "js/pages/about.js",
-      "bytes": 464,
-      "gzip": 311
-    },
-    {
-      "file": "js/pages/projects.js",
-      "bytes": 933,
-      "gzip": 477
+      "raw": 464,
+      "gzip": 310
     },
     {
       "file": "js/pages/contact.js",
-      "bytes": 1487,
-      "gzip": 823
+      "raw": 1487,
+      "gzip": 820
     },
     {
-      "file": "js/studio.js",
-      "bytes": 6902,
-      "gzip": 2471
+      "file": "js/pages/home.js",
+      "raw": 464,
+      "gzip": 310
+    },
+    {
+      "file": "js/pages/notfound.js",
+      "raw": 1716,
+      "gzip": 844
+    },
+    {
+      "file": "js/pages/play.js",
+      "raw": 3298,
+      "gzip": 1301
+    },
+    {
+      "file": "js/pages/projects.js",
+      "raw": 933,
+      "gzip": 480
+    },
+    {
+      "file": "js/portrait.js",
+      "raw": 2044,
+      "gzip": 847
+    },
+    {
+      "file": "js/premium.js",
+      "raw": 5210,
+      "gzip": 2036
+    },
+    {
+      "file": "js/sound.js",
+      "raw": 1398,
+      "gzip": 683
     },
     {
       "file": "js/studio-state.js",
-      "bytes": 384,
-      "gzip": 267
+      "raw": 384,
+      "gzip": 266
+    },
+    {
+      "file": "js/studio.js",
+      "raw": 6902,
+      "gzip": 2466
+    },
+    {
+      "file": "js/world.js",
+      "raw": 1226,
+      "gzip": 601
     }
   ],
   "total": {
-    "raw": 27021,
-    "gzip": 11042
+    "raw": 39225,
+    "gzip": 16176
   }
 }

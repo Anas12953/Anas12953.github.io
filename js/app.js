@@ -66,7 +66,7 @@ document.addEventListener('click',e=>{
  setTimeout(()=>location.assign(target.href),170);
 });
 window.addEventListener('pageshow',e=>{document.body.classList.remove('route-leaving');if(e.persisted){scrolling.setEnabled(motion);cursor?.setEnabled(customCursor&&motion);syncControls();}});
-const pages={home:()=>import('./pages/home.js'),about:()=>import('./pages/about.js'),projects:()=>import('./pages/projects.js'),contact:()=>import('./pages/contact.js')};
+const pages={home:()=>import('./pages/home.js'),about:()=>import('./pages/about.js'),projects:()=>import('./pages/projects.js'),contact:()=>import('./pages/contact.js'),play:()=>import('./pages/play.js'),notfound:()=>import('./pages/notfound.js')};
 const pageLoader=pages[document.body.dataset.page];
 if(pageLoader)pageLoader().then(m=>m.init(context)).catch(()=>notify('An optional interaction could not load. All page links remain available.'));
 syncControls();
@@ -74,3 +74,5 @@ if(document.querySelector('[data-opening]'))import('./studio.js').then(m=>m.init
 window.addEventListener('pagehide',e=>{if(e.persisted){scrolling.stop();return;}scrolling.dispose();cursor?.dispose();audio?.mute();});
 
 
+
+import('./premium.js').then(m=>m.init(context)).catch(()=>{});

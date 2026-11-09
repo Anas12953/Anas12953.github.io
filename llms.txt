@@ -3,21 +3,27 @@
 > Student and developer based in Abu Dhabi, UAE. Portfolio of verified school tools, web experiences and robotics work.
 
 ## Key pages
-- [Anas Yasser | Student & Developer](https://anasyasser.is-a.dev/): Inside Anas Yasser’s creative studio: web experiences, school tools, robotics and the curiosity of a student developer in Abu Dhabi.
-- [About Anas Yasser](https://anasyasser.is-a.dev/about/): Meet Anas Yasser, a Grade 8 student at Al Soqoor School: his creative process, real project experience and software engineering ambitions.
-- [Projects by Anas Yasser](https://anasyasser.is-a.dev/projects/): Explore Anas Yasser’s Desert Knights portals, Monthly Grades Tracker, Al Qanas Photography, school spreadsheets, robotics and learning tools.
-- [Desert Knights — Parents | Anas Yasser](https://anasyasser.is-a.dev/projects/desert-knights/): A parent portal for Al Ebtehal Kindergarten, bringing classroom updates and learning resources into one place.
-- [Al Ebtehal KG Monthly Grades Tracker | Anas Yasser](https://anasyasser.is-a.dev/projects/monthly-grades/): A bilingual KG1 and KG2 web portal for viewing monthly academic standards, progress and educational guidance.
-- [Al Ebtehal Events Calendar | Anas Yasser](https://anasyasser.is-a.dev/projects/events-calendar/): A bilingual school-year calendar for Al Ebtehal KG, organizing events from August 2026 to July 2027.
-- [Al Ebtehal Baseline Assessment | Anas Yasser](https://anasyasser.is-a.dev/projects/baseline-assessment/): An Excel and Google Sheets workflow for consolidating KG1 and KG2 baseline assessment information.
-- [FalconBot V2 | Anas Yasser](https://anasyasser.is-a.dev/projects/falconbot/): Our LEGO SPIKE Prime mission robot, built through testing, teamwork and a lighter second design.
-- [Anas Chess | Anas Yasser](https://anasyasser.is-a.dev/projects/grandmaster/): A chess web-app project exploring playable boards, puzzles, readable pieces and coordinated visual themes.
-- [Al Qanas Photography | Anas Yasser](https://anasyasser.is-a.dev/projects/al-qanas/): A photography website presenting Yasser Ismail’s work, with a strong portrait-led identity and a path into his portfolio.
-- [Desert Knights — Teacher Dashboard | Anas Yasser](https://anasyasser.is-a.dev/projects/desert-knights-teacher/): The teacher-facing Desert Knights workspace for Ola Khalifa’s Al Ebtehal KG class, covering attendance, plans, grades and classroom resources.
-- [RL DropWatch | Anas Yasser](https://anasyasser.is-a.dev/projects/rl-dropwatch/): A development-stage PWA project for following Rocket League livestreams and keeping track of Twitch Drops and reminders.
-- [Science Studio | Anas Yasser](https://anasyasser.is-a.dev/projects/science-studio/): An interactive Grade 8 revision app exploring force and acceleration, force pairs, practice questions and answer feedback.
-- [Grade 8 Arabic Revision | Anas Yasser](https://anasyasser.is-a.dev/projects/arabic-revision/): An Arabic-first interactive revision project for Grade 8, bringing lesson review and question practice into a right-to-left interface.
-- [Contact Anas Yasser](https://anasyasser.is-a.dev/contact/): Say hello to Anas Yasser, discuss his projects, or find his confirmed email and social profiles.
+- [Anas Yasser | Student & Developer](https://anas12953.github.io/): Inside Anas Yasser’s creative studio: web experiences, school tools, robotics and the curiosity of a student developer in Abu Dhabi.
+- [About Anas Yasser](https://anas12953.github.io/about/): Meet Anas Yasser, a Grade 8 student at Al Soqoor School: his creative process, real project experience and software engineering ambitions.
+- [Projects by Anas Yasser](https://anas12953.github.io/projects/): Explore Anas Yasser’s Desert Knights portals, Monthly Grades Tracker, Al Qanas Photography, school spreadsheets, robotics and learning tools.
+- [Desert Knights — Parents | Anas Yasser](https://anas12953.github.io/projects/desert-knights/): A parent portal for Al Ebtehal Kindergarten, bringing classroom updates and learning resources into one place.
+- [Al Ebtehal KG Monthly Grades Tracker | Anas Yasser](https://anas12953.github.io/projects/monthly-grades/): A bilingual KG1 and KG2 web portal for viewing monthly academic standards, progress and educational guidance.
+- [Al Ebtehal Events Calendar | Anas Yasser](https://anas12953.github.io/projects/events-calendar/): A bilingual school-year calendar for Al Ebtehal KG, organizing events from August 2026 to July 2027.
+- [Al Ebtehal Baseline Assessment | Anas Yasser](https://anas12953.github.io/projects/baseline-assessment/): An Excel and Google Sheets workflow for consolidating KG1 and KG2 baseline assessment information.
+- [FalconBot V2 | Anas Yasser](https://anas12953.github.io/projects/falconbot/): Our LEGO SPIKE Prime mission robot, built through testing, teamwork and a lighter second design.
+- [Anas Chess | Anas Yasser](https://anas12953.github.io/projects/grandmaster/): A chess web-app project exploring playable boards, puzzles, readable pieces and coordinated visual themes.
+- [Al Qanas Photography | Anas Yasser](https://anas12953.github.io/projects/al-qanas/): A photography website presenting Yasser Ismail’s work, with a strong portrait-led identity and a path into his portfolio.
+- [Desert Knights — Teacher Dashboard | Anas Yasser](https://anas12953.github.io/projects/desert-knights-teacher/): The teacher-facing Desert Knights workspace for Ola Khalifa’s Al Ebtehal KG class, covering attendance, plans, grades and classroom resources.
+- [RL DropWatch | Anas Yasser](https://anas12953.github.io/projects/rl-dropwatch/): A development-stage PWA project for following Rocket League livestreams and keeping track of Twitch Drops and reminders.
+- [Science Studio | Anas Yasser](https://anas12953.github.io/projects/science-studio/): An interactive Grade 8 revision app exploring force and acceleration, force pairs, practice questions and answer feedback.
+- [Grade 8 Arabic Revision | Anas Yasser](https://anas12953.github.io/projects/arabic-revision/): An Arabic-first interactive revision project for Grade 8, bringing lesson review and question practice into a right-to-left interface.
+- [Contact Anas Yasser](https://anas12953.github.io/contact/): Say hello to Anas Yasser, discuss his projects, or find his confirmed email and social profiles.
 
 ## Attribution and scope
 Anas is a Grade 8 student. AI assistance is credited in relevant project pages. Calendar and Baseline Assessment are spreadsheet projects; no student records or private sheet URLs are published. Technology for Desert Knights is explicitly awaiting confirmation.
+
+## Journey and exploration
+- /journey/: school, robotics milestone and certificate slots. Certificate scans are pending; slots are not awarded credentials.
+- /resources/: reference shelf for web, accessibility, motion and robotics.
+- /play/: optional keyboard/touch project explorer.
+- /ar/: Arabic introduction; project case studies are currently English.

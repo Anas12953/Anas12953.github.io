@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {moveRover,nearestStop,puzzleMove} from '../js/game-state.js';
+test('rover stays inside map at every edge',()=>{assert.deepEqual(moveRover({x:2,y:99},-10,10),{x:0,y:100});assert.deepEqual(moveRover({x:99,y:2},10,-10),{x:100,y:0});});
+test('a stop opens only within reach and closest wins',()=>{const stops=[{id:1,x:10,y:10},{id:2,x:20,y:10}];assert.equal(nearestStop({x:19,y:10},stops).id,2);assert.equal(nearestStop({x:80,y:80},stops),null);});
+test('puzzle blocks walls and edges, but allows a complete delivery route',()=>{assert.deepEqual(puzzleMove({x:0,y:0},-1,0),{x:0,y:0});assert.deepEqual(puzzleMove({x:1,y:0},0,1),{x:1,y:0});let p={x:0,y:5};for(let i=0;i<5;i++)p=puzzleMove(p,1,0);for(let i=0;i<5;i++)p=puzzleMove(p,0,-1);assert.deepEqual(p,{x:5,y:0});});

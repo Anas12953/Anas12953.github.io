@@ -1,0 +1,16 @@
+import {moveRover,nearestStop} from '../game-state.js';
+export function init(context){
+ const map=document.querySelector('[data-drive-map]'),rover=map.querySelector('[data-rover]'),stations=[...map.querySelectorAll('[data-stop]')].map(b=>({x:Number(b.dataset.x),y:Number(b.dataset.y),id:b.dataset.stop,button:b,title:b.dataset.title,url:b.dataset.url,description:b.dataset.description}));
+ const title=document.querySelector('[data-stop-title]'),description=document.querySelector('[data-stop-description]'),link=document.querySelector('[data-stop-link]'),status=document.querySelector('[data-drive-status]');let position={x:50,y:86},selected=null,frame=0,last=0;const held=new Set(),visited=new Set();
+ function select(stop){selected=stop;visited.add(stop.id);title.textContent=stop.title;description.textContent=stop.description;link.href=stop.url;link.hidden=false;stations.forEach(s=>s.button.setAttribute('aria-pressed',String(s.id===stop.id)));status.textContent=`${visited.size} of ${stations.length} stops explored. ${stop.title} selected.`;context.play('click');}
+ function render(){rover.style.left=position.x+'%';rover.style.top=position.y+'%';const near=nearestStop(position,stations);map.dataset.near=near?.id||'';if(near&&selected?.id!==near.id)select(near);}
+ const direction={ArrowUp:[0,-1],w:[0,-1],ArrowDown:[0,1],s:[0,1],ArrowLeft:[-1,0],a:[-1,0],ArrowRight:[1,0],d:[1,0]};
+ function tick(now){const dt=Math.min(40,now-(last||now-16));last=now;let dx=0,dy=0;for(const k of held){const d=direction[k];if(d){dx+=d[0];dy+=d[1];}}const length=Math.hypot(dx,dy)||1;position=moveRover(position,dx/length*dt*.035,dy/length*dt*.035);render();if(held.size)frame=requestAnimationFrame(tick);else{frame=0;last=0;}}
+ function start(key){if(!direction[key])return;held.add(key);if(!frame)frame=requestAnimationFrame(tick);}
+ function stop(){held.clear();cancelAnimationFrame(frame);frame=0;last=0;}
+ map.addEventListener('keydown',e=>{if(direction[e.key]&&e.target===map){e.preventDefault();start(e.key);}});window.addEventListener('keyup',e=>held.delete(e.key));map.addEventListener('blur',stop);window.addEventListener('blur',stop);
+ document.querySelectorAll('[data-drive]').forEach(b=>{b.addEventListener('pointerdown',e=>{if(e.button!==0)return;b.setPointerCapture(e.pointerId);const [dx,dy]=direction[b.dataset.drive];position=moveRover(position,dx*3,dy*3);render();start(b.dataset.drive);});b.addEventListener('pointerup',stop);b.addEventListener('pointercancel',stop);b.addEventListener('lostpointercapture',stop);b.addEventListener('click',e=>{if(e.detail===0){const [dx,dy]=direction[b.dataset.drive];position=moveRover(position,dx*8,dy*8);render();}});});
+ stations.forEach(s=>s.button.addEventListener('click',()=>{position={x:s.x,y:s.y};render();if(selected?.id!==s.id)select(s);}));
+ document.querySelector('[data-reset-drive]').addEventListener('click',()=>{stop();position={x:50,y:86};selected=null;visited.clear();stations.forEach(s=>s.button.setAttribute('aria-pressed','false'));title.textContent='Where will curiosity take you?';description.textContent='Drive to a marker or choose one directly. Each stop opens a real project or part of my story.';link.hidden=true;status.textContent='Ready to explore.';render();});
+ render();window.addEventListener('pagehide',stop);
+}

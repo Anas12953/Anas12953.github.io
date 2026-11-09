@@ -1,0 +1,10 @@
+{
+  "name": "anas-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js && python3 scripts/verify.py",
+    "report": "python3 scripts/bundle-report.py",
+    "dev": "node scripts/serve.mjs"
+  }
+}
